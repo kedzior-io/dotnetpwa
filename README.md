@@ -1,2 +1,3 @@
 # dotnetpwa
-Example of PWA (Progressive Web App) made with asp.net core, MySQL and hosted on Azure
+Example of PWA (Progressive Web App) with login and registration.
+Made with asp.net core, identity, mysql and hosted on Azure.
