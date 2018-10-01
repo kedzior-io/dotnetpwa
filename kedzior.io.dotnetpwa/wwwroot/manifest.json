@@ -1,0 +1,17 @@
+{
+  "name": "kedzior.io ",
+  "short_name": "DOTNET PWA",
+  "description": "PWA in ASP.NET Core using Identity, Azure and MySQL in App",
+  "icons": [
+    {
+      "src": "/images/icon192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon512x512.png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "/"
+}

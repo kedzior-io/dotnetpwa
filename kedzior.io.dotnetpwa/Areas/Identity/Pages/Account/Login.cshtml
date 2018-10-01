@@ -1,0 +1,59 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    ViewBag.BodyClassName = "login-page";
+}
+
+<div class="login-container content-middle">
+        <div class="login-social">
+            <h4 class="white">Login with social media</h4>
+            <p>Don't have an account? Create your account. It's take less then a minutes</p>
+            <hr />
+            <div class="form-group">
+            <form asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">               
+                @foreach (var provider in Model.ExternalLogins)
+                 {
+                    <button type="submit" name="provider" value="@provider.Name" class="btn btn-block btn-social btn-@provider.DisplayName.ToLower()"><span class="fab fa-@provider.DisplayName.ToLower()"></span> Log in with @provider.DisplayName</button>                                                                                     
+                 }
+            </form>
+            </div>
+        </div>
+        <div class="login-form">            
+             <h4>@ViewData["Title"]</h4>
+             <div asp-validation-summary="All" class="text-danger"></div>                     
+             <form method="post">
+                <div class="form-group has-feedback has-feedback-left">
+                    <input asp-for="Input.Email" class="form-control input-xlg" placeholder="Email">
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>                    
+                </div>
+
+                <div class="form-group has-feedback has-feedback-left">
+                    <input asp-for="Input.Password" class="form-control input-xlg" placeholder="Password">
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>                    
+                </div>
+
+                <div class="form-group login-options">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="checkbox-inline">
+                                    <input asp-for="Input.RememberMe"> Remember
+                            </label>
+                        </div>
+
+                        <div class="col-sm-6 text-right">
+                            <a asp-page="./ForgotPassword" >Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block btn-xlg">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
