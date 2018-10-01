@@ -18,3 +18,6 @@ Installation steps:
  3. `dotnet restore`
  4. `dotnet run`
  
+**Have fun!**
+
+<img width="774" alt="login-kedzior io dotnetpwa" src="https://user-images.githubusercontent.com/40808369/46316019-41f0c380-c5cf-11e8-9c84-4bf0d0bb4864.png">
