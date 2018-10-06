@@ -9,9 +9,8 @@
     <div class="small-form">            
         <h4>@ViewData["Title"]</h4>
         
-        <p>@Model.StatusMessage</p>
-
-        @Html.Partial("_StatusMessage", Model.StatusMessage)       
+        @Html.Partial("_StatusMessage", Model.StatusMessage)
+        <h4>TempData: @TempData["TempDataProperty-StatusMessage"]</h4>
         <form id="profile-form" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
