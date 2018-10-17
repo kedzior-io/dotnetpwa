@@ -13,13 +13,13 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "MYSQLCONNSTR_localdb": "server=localhost;port=3306;database=aspnetcore_identity_pwa;uid=kedzior;password=kedzior"
+        "MYSQLCONNSTR_localdb": "Database=dotnetpwa;Data Source=127.0.0.1:3307;User Id=kedzior;Password=kedzior"
       }
     },
     "kedzior.io.dotnetpwa": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "applicationUrl": "https://localhost:5022;http://localhost:5021",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
